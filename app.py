@@ -95,7 +95,7 @@ def render_ticket(ticket: Ticket) -> None:
                 ):
                     resolve_ticket(ticket.id, resolution_text.strip())
                     st.success("Ticket marked as resolved.")
-                    st.experimental_rerun()
+                    st.rerun()
         else:
             st.success("Resolved")
             st.markdown(f"**Resolution:** {ticket.resolution}")
@@ -159,7 +159,7 @@ def render_new_ticket_form() -> None:
                 )
                 add_ticket(ticket)
                 st.success(f"Ticket #{ticket.id} has been logged.")
-                st.experimental_rerun()
+                st.rerun()
 
 
 def main() -> None:
