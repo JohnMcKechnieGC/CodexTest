@@ -19,3 +19,11 @@ A simple in-memory IT helpdesk demo built with Streamlit. Users can log new tick
    ```
 
 The app starts a local server and opens in your browser. Because ticket data is stored in memory, it resets whenever the app restarts.
+
+## Running tests
+
+Unit tests cover the domain logic (ticket creation, resolution, filtering, and formatting) independent of the Streamlit UI. To run them:
+
+```bash
+pytest
+```
